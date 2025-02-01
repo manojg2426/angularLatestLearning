@@ -1,1 +1,15 @@
-<p>tic-tac-toe works!</p>
+<div class="gamelayout">
+    <h1>Tic Tac Toe</h1>
+    <div class="board">
+        <p style="font-size:20px" *ngIf="!winner && !draw"> Player Turn: {{currentPlayer}}</p>
+        <p style="font-size: 30px; color: green;" *ngIf="winner"> Winner is: {{winner}} </p>
+        <p style="font-size: 20px; color: red;" *ngIf="draw"> Game is Draw </p>
+        <div class="row" *ngFor="let row of board; let rowIndex = index">
+            <div class="cell" *ngFor="let col of row;let colIndex = index" (click)="playGame(rowIndex,colIndex)">
+                {{col}}
+            </div>
+        </div>
+        <br>
+        <button (click)="resetGame()">Reset Game</button>
+    </div>
+</div>

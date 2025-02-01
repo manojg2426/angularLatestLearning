@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Router,RouterModule } from '@angular/router';
+import { RouterOutlet,RouterModule } from '@angular/router';
 import { TicTacToeComponent} from './tic-tac-toe/tic-tac-toe.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule,TicTacToeComponent],
+  imports: [RouterModule,RouterOutlet,TicTacToeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
