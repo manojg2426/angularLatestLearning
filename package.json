@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "build:ssr": "ng build --aot && ng run angular-pro:server",
     "serve:ssr:angularPro": "node dist/angular-pro/server/server.mjs"
   },
   "private": true,
